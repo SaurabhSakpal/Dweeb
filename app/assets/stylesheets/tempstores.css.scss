@@ -1,0 +1,115 @@
+// Place all the styles related to the Tempstores controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#top_header
+{
+background-color :#181818 ;
+height :80px
+}
+#top_header h1
+{
+margin :0px;
+color : #FF8C00;
+padding-top :10px;
+padding-left :80px;
+font-size:50px;
+position :relative;
+bottom: 85px;
+}
+#top_header #header_link
+{
+position :relative;
+left :790px;
+bottom :154px;
+height : 50px;
+width: 150px;
+text-align:center;
+background-color : #FF8C00;
+padding-top: 30px;
+}
+#top_header #header_link a:link
+{
+text-decoration:none;
+color: white;
+font-size:20px;
+font-style:bold;
+padding-top: 30px;
+}
+#top_header #header_link a:hover
+{
+text-decoration:underline;
+color: white;
+font-size:20px;
+font-style:bold;
+
+}
+#top_header #header_link a:visited
+{
+text-decoration:none;
+color: white;
+font-size:30px;
+font-style:bold;
+}
+#login_block
+{
+background-color :#181818 ;
+height :300px;
+width :500px;
+margin-left :300px;
+margin-top :150px;
+border-radius: 6px;
+}
+body
+{
+background-image : url(comn/login_bg.jpg);
+}
+#login_block h2
+{
+color : #FF8C00;
+text-align:center;
+font-size:40px;
+margin-bottom :10px;
+}
+#login_block p.note
+{
+color : white;
+text-align:center;
+font-size:20px;
+margin-top :0px;
+}
+#login_block table
+{
+padding-left : 40px;
+}
+#login_block table td.first
+{
+width : 100px
+}
+#login_block table tr
+{
+height :50px;
+}
+#login_block table tr input
+{
+height :40px;
+width :100%;
+border-radius: 6px;
+}
+#login_block table tr label
+{
+color : #FF8C00;
+font-size:20px;
+}
+#login_block table td.second
+{
+width : 300px
+}
+#web_message
+{
+background-color :white;
+border-radius: 10px;
+font-size:20px;
+width :500px;
+text-align :center;
+margin-left :300px;
+}

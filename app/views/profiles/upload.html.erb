@@ -1,0 +1,11 @@
+
+<%= @user.fname%>
+</p>
+<form action = "http://localhost:3000/profiles/image_writer/<%= @user.id%>" enctype="multipart/form-data">
+<p> Upload your picture: </p> 
+<p>
+<input accept="image/png,image/gif,image/jpeg"  id="user_pic" name="picture[:uploaded_picture]" type="file" />
+</p> <br/>
+<p> <input class = "button" name="submit" type="submit" value="Upload" />  </p> 
+</form>
+

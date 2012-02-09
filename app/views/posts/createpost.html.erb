@@ -1,0 +1,34 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2> Post a Update </h2>
+</div>
+<div id = "bookmrk_msg">
+<p>You can add as much bookmarks as you want. Your bookmarks will be visible to all your profile visitors. We are working on the privacy system of the website so that you will be given more power to control stuffs like who can see and who can't. We are also adding DELETE bookmark option soon.</p>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'posts', :id=> @user2.id ) %> > show updates </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'createpost', :controller => 'posts', :id=> @user.id ) %> > post update </a>
+<% end %>
+&nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'selfshow', :controller => 'posts', :id=> @user.id ) %> > self post </a></br>
+<% end %>
+</div>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<div id = "bok_frm">
+<%= form_for @user, :url => { :controller => "posts" , :action => "update", :id => @user.id } do |f| %>
+<h3>Post Title</h3>	
+<input id="bk_title" name="post[title]" size="30" type="text" />
+<h3>Post Body(140 letters)<h3/>
+<textarea id="bk_body" name="post[body]" cols="40" rows="10"></textarea>
+<h3>Tags<h3/>
+
+<input id="bk_url" name="post[tag]" size="30" type="text" /></br>
+</br></br>
+<input  id ="brk_but" name="commit" type="submit" value="post update" />
+<% end %>
+</div>
+</div>

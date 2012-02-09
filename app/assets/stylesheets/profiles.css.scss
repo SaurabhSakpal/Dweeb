@@ -1,0 +1,269 @@
+// Place all the styles related to the Profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#pat_msg_box
+{
+background-color :white;
+border-radius: 10px;
+font-size:15px;
+height :170px;
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 20px;
+margin-top:20px
+}
+#content #profile_bar #navigpart #jrtlink
+{
+height : 20px;
+font-size :10px;
+background :#C8C8C8;
+padding-top :15px;
+padding-bottom: 15px;
+}
+#top_bar
+{
+background-color :#181818 ;
+height :80px;
+}
+#top_bar h1
+{
+position :relative;
+bottom: 85px;
+margin :0px;
+color : #FF8C00;
+padding-top :10px;
+padding-left :60px;
+font-size:50px;
+}
+#top_bar div.header_link 
+{
+position :relative;
+left :720px;
+bottom :154px;
+height : 50px;
+width: 120px;
+text-align:center;
+background-color : #FF8C00;
+padding-top: 30px;
+} 
+#top_bar #logout 
+{
+position :relative;
+left :857px;
+bottom :234px;
+height : 50px;
+width: 120px;
+text-align:center;
+background-color : #FF8C00;
+padding-top: 30px;
+}
+
+#top_bar div.header_link a:link
+{
+text-decoration:none;
+color: white;
+font-size:20px;
+font-style:bold;
+padding-top: 30px;
+}
+#top_bar div.header_link a:hover
+{
+text-decoration:underline;
+color: white;
+font-size:20px;
+font-style:bold;
+
+}
+#top_bar div.header_link a:visited
+{
+text-decoration:none;
+color: white;
+font-size:30px;
+font-style:bold;
+}
+#content #prf_blck
+{
+background-color :#E0E0E0;
+position:absolute;
+width:700px;
+height:1200px;
+left :300px;
+top: 0px;
+border-radius: 6px;
+font-family:'Jura', sans-serif;
+}
+body
+{
+background-image:url('comn/login_bg.jpg');
+}
+#content #prf_blck #prf_cnt table td
+{
+
+font-family:'Jura', sans-serif;
+font-size :20px;
+}
+#content #prf_blck #prf_cnt table tr
+{
+height: 80px;
+}
+#content #prf_blck #prf_cnt table td.first
+{
+font-family:'Jura', sans-serif;
+color : #FF8C00;
+width :200px;
+}
+#content #prf_blck #prf_cnt table td.two
+{
+font-family:'Jura', sans-serif;
+color :#181818;
+width :300px;
+}
+#content #prf_blck #prf_cnt table
+{
+padding-left: 100px;
+}
+#content #prf_blck h2
+{
+font-size: 30px;
+font-family:'Kotta One', serif;
+color :#181818 ;
+text-align: center;
+padding-top: 30px;
+}
+#content #prf_blck p
+{
+font-family:'Kotta One', serif;
+color :#181818 ;
+text-align: center;
+}
+#content #prf_blck #option_bar
+{
+background-color :#181818 ;
+height :30px;
+}
+#content #prf_blck #option_bar a:link
+{
+text-decoration:none;
+color: white;
+font-size:20px;
+font-style:bold;
+padding-top: 30px;
+}
+#content #prf_blck #option_bar a:hover
+{
+text-decoration:underline;
+color:  #FF8C00;
+font-size:20px;
+font-style:bold;
+
+}
+#content #prf_blck #option_bar a:visited
+{
+text-decoration:none;
+color: white;
+font-size:30px;
+font-style:bold;
+}
+#content #profile_bar
+{
+background-color: #181818;
+width: 270px;
+border-radius: 6px;
+height: 1200px;
+}
+#content
+{
+position: relative;
+top: 10px;
+}
+#content #profile_bar #profile_img
+{
+border-radius: 6px;
+margin-left: 10px;
+margin-top: 20px;
+}
+
+#content #profile_bar #navigpart div.navilink
+{
+height: 70px;
+background-color : #FF8C00;
+margin-top: 30px;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 6px;
+text-align: center;
+padding-top: 50px;
+}
+
+#content #profile_bar #navigpart #msglink2
+{
+height: 70px;
+background-color :#3A5ECA;
+margin-top: 30px;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 6px;
+text-align: center;
+padding-top: 50px;
+}
+
+
+#content #profile_bar #navigpart a:link
+{
+text-decoration:none;
+color: white;
+font-size:20px;
+font-style:bold;
+padding-top: 30px;
+}
+#content #profile_bar #navigpart a:hover
+{
+text-decoration:underline;
+color: white;
+font-size:20px;
+font-style:bold;
+
+}
+#content #profile_bar #navigpart a:visited
+{
+text-decoration:none;
+color: white;
+font-size:30px;
+font-style:bold;
+text-align :center;
+}
+
+#content #profile_bar a:link
+{
+text-decoration:underlined;
+color: white;
+font-size:15px;
+font-style:bold;
+text-align :center;
+}
+#content #profile_bar a:hover
+{
+text-decoration:none;
+color: white;
+font-size:16px;
+font-style:bold;
+text-align :center;
+}
+#content #profile_bar a:visited
+{
+text-decoration:underlined;
+color: white;
+font-size:20px;
+font-style:bold;
+text-align :center;
+}
+#prf_blck div.bookmarks
+{
+border-bottom :3px dashed orange;
+padding-left: 20px;
+}
+#prf_blck div.bookmarks p
+{
+text-align :left;
+}
+

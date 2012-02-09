@@ -1,0 +1,36 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Your Posts</h2>
+</div>
+<div id = "my_profiles">
+<p id = "para">This are your updates</p>
+<p style="color: green"><%= flash[:notice] %></p>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'posts', :id=> @user2.id ) %> > show updates </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'createpost', :controller => 'posts', :id=> @user.id ) %> > post update </a>
+<% end %>
+&nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'selfshow', :controller => 'posts', :id=> @user.id ) %> > self post </a></br>
+<% end %>
+</div>
+
+<% if @post == nil %>
+<p> Nothing to display </p>
+<% else %>
+<% @post.each do |p| %>
+<% if p == nil %>
+<p> Nothing to display </p>
+<% else %>
+<p> Title: <%= p.title %> </p>
+<p> Post: <%= p.body %> </p>
+<p>Posted by:- <%= @user.fname %> &nbsp; <%= @user.lname %> &nbsp; on <%=@user.created_at %> </p>
+<a href = <%= url_for(:action => 'delete', :controller => 'posts', :id=> p.id ) %> > delete </a>
+<% end %>
+<% end %>
+<% end %>
+</div>
+

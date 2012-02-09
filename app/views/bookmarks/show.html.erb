@@ -1,0 +1,20 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Your Bookmarks</h2>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'bookmarks', :id=> @user2.id ) %> > show bookmarks </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'edit', :controller => 'bookmarks', :id=> @user.id ) %> > add bookmarks </a></br>
+<% end %>
+</div>
+<% @user2.bookmarks.each do |b| %>
+<div class ="bookmarks">
+<p>Title:&nbsp;<%= b.title%> <p>
+<p>URL:&nbsp;<a href = <%= b.url %> > <%= b.url %> </a></p>
+<p>Description:&nbsp;<%= b.desc %></p>
+<a href = <%= url_for(:action => 'delete', :controller => 'bookmarks', :id=> b.id ) %> > delete </a>
+</div>
+<%end%>
+</div>

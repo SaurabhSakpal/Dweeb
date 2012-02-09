@@ -1,0 +1,36 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Your SKILLS</h2>
+</div>
+<div id = "my_profiles">
+
+<p id ="para_skil" >'SKILLS' are important part of 'Dweeb' because they will help others to know what you are master of and will alow them to ask you doubts related to that topic</p>
+
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'profiles') %> > show profile </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'edit', :controller => 'profiles') %> > edit profile</a>
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'interests', :id=> @user.id ) %> > edit interests </a> &nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'interests') %> > edit skills</a>&nbsp; &nbsp; &nbsp;
+<% end %>
+<% if @user2.id != @user.id %>
+<a href = <%= url_for(:action => 'show', :controller => 'skills') %> > Connect with <%= @user2.fname %> </a><br/>
+<% end %>
+</div>
+<div id = "form_block">
+<p class="Format_note" >The format to enter the text is as follow:</p>
+<p class="Format_note" > Mathematics,Physics,Robotics(separate skills using commas)</p>
+<%= form_for @user, :url => { :controller => "skills" , :action => "update", :id => @user.id } do |f| %>
+<table class = "input_table">
+<tr>
+<td>Skills</td><td><textarea id="bk_body" name="skill[skl]" cols="40" rows="10"></textarea></td>
+</tr>
+<tr>
+<td></td><td><input  id ="brk_but" name="commit" type="submit" value="add skills"/></td>
+</tr>
+</table>
+<% end %>
+</div>

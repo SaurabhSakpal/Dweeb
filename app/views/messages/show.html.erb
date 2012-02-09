@@ -1,0 +1,19 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Your Personal Messages</h2>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'profiles') %> > back to profile </a> &nbsp; &nbsp; &nbsp;
+</div>
+<p style="color: green"><%= flash[:notice] %></p>
+</br>
+<% @messages.each do |m| %>
+<div class ="bookmarks">
+<p>From :&nbsp;<%= User.find(m.sender).fname %> &nbsp;<%= User.find(m.sender).lname %><p>
+<p>Subject: <%= m.subject %> </p>
+<p>Body:&nbsp;<%= m.msg %></p>
+<a href = <%= url_for(:action => 'delete', :controller => 'messages', :id=> m.id ) %> > delete </a>
+</div>
+<%end%>
+</div>

@@ -1,0 +1,32 @@
+<div id ="web_message">
+<p style="color: green"><%= flash[:notice] %></p>
+</div>
+<div id = "login_block">
+<h2>: LOGIN :</h2>
+<p class = "note" >Welcome back Users</p>
+
+<div id ="login_form">
+<form accept-charset="UTF-8" action="/tempstores/login"method="post" class = "login" >
+<table>
+	<tr>
+	<td class = "first"><label>Email</label></td>
+	<td class = "second">
+	<input id="bk_title" name="tempstore[email]" size="30" type="text" />
+	</td>
+	</tr>
+	<tr>
+	<td class = "first"><label>Password</label></td>
+	<td class = "second">
+<input id = "login_pass" name ="tempstore[password]" size = "30" type ="password"/>
+	</td>
+	</tr>
+	<tr>
+	<td class = "first" ></td>
+	<td class = "second">
+	<input class = "button" name="submit" type="submit" value="Log In"/>
+	</td>
+	</tr>
+	</table>
+</form>
+</div>
+</div>

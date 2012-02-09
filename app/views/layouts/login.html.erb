@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dweeb</title>
+  <%= stylesheet_link_tag    "tempstores" %>
+  <%= javascript_include_tag "tempstores" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id = "top_header">
+<image id ="logo" src = "assets/comn/logo.jpg" height ="80px">
+<h1>Dweeb</h1>
+<div id = "header_link">
+<a href = "/homepage">Signup</a>
+</div>
+</div>
+<%= yield %>
+<div id = "cfo">
+<div id = "cfo_am">
+
+</div>
+<div id = "cfo_sa">
+
+</div>
+</div>
+
+</body>
+</html>

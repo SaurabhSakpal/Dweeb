@@ -1,0 +1,43 @@
+// Place all the styles related to the Bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#content #prf_blck #bookmrk_msg p
+{
+text-align: left;
+padding-left: 20px;
+}
+
+#content #prf_blck #bok_frm
+{
+padding-left: 20px;
+}
+#content #prf_blck #bok_frm h3
+{
+font-family:'Kotta One', serif;
+color :#181818 ;
+font-size :20px;
+}
+#content #prf_blck #bok_frm textarea
+{
+border-radius :6px;
+}
+#content #prf_blck #bok_frm input
+{
+height : 30px;
+width : 340px;
+border-radius :6px;
+}
+#content #prf_blck #bok_frm #brk_but
+{
+background-color :white;
+border-radius :6px;
+height : 50px;
+font-family:'Kotta One', serif;
+color :#181818 ;
+font-size :20px;
+border :2px solid black;
+}
+#content #prf_blck #bok_frm #brk_but input:hover
+{
+background-color :orange;
+}

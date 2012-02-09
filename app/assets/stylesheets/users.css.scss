@@ -1,0 +1,150 @@
+// Place all the styles related to the Welcomes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#top_bar
+{
+background-color :#181818 ;
+height :80px;
+}
+#top_bar #logo
+{
+padding-left:30px;
+}
+#top_bar #header_link
+{
+position :relative;
+left :790px;
+bottom :85px;
+height : 55px;
+width: 150px;
+text-align:center;
+background-color : #FF8C00;
+padding-top: 25px;
+text-align :center;
+}
+#top_bar #header_link a:link
+{
+text-decoration:none;
+color: white;
+font-size:20px;
+font-style:bold;
+padding-top:25px;
+}
+#top_bar #header_link a:hover
+{
+text-decoration:underline;
+color: white;
+font-size:20px;
+font-style:bold;
+
+}
+#top_bar #header_link a:visited
+{
+text-decoration:none;
+color: white;
+font-size:30px;
+font-style:bold;
+}
+body
+{
+background-image:url('comn/login_bg.jpg');
+
+}
+#header
+{
+height :200px;
+text-align:center;
+font-size:40px;
+padding-top: 30px;
+color : white;
+width :100%;
+}
+#content_forms
+{
+position : absolute;
+right: 10px;
+font-size:25px;
+
+}
+#features
+{
+position: relative;
+width: 500px;
+left: 10px;
+font-size:20px;
+}
+#features img
+{
+align: center;
+}
+#header h1
+{
+margin :0px;
+font-family: 'Coming Soon', cursive;
+}
+#header p
+{
+font-family:'Jura', sans-serif;
+margin: 0px;
+}
+#SignupBlock  table tr
+{
+height : 45px;
+}
+#SignupBlock table tr td input
+{
+height : 35px;
+border-radius: 6px;
+width :100%;
+}
+
+body table tr td .button
+{
+height: 0px;
+font-family: 'Jura',bold,sans-serif;
+font-size: 20px;
+border-radius: 6px;
+}
+
+#SignupBlock tr td label
+{
+font-family:'Jura', sans-serif;
+font-size: 20px;
+color: #FF8C00;
+}
+#SignupBlock
+{
+background-color :#181818;
+border-radius: 6px;
+width : 400px;
+height : 400px;
+}
+#SignupBlock h2
+{
+color : #FF8C00;
+text-align :center;
+font-size : 30px;
+}
+#SignupBlock p
+{
+font-size : 20px;
+text-align :center;
+}
+#SignupBlock table tr td.first
+{
+width : 100px;
+}
+#SignupBlock table
+{
+padding-left: 25px;
+}
+#SignupBlock table tr td.second
+{
+width : 250px;
+}
+#features #img_feature
+{
+
+margin-top:25px;
+border-radius: 6px;
+}

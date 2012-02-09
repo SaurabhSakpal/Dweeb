@@ -1,0 +1,41 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Current Updates</h2>
+</div>
+<div id = "my_profiles">
+<p id = "para">You will get current updates onm the topic of your interests here</p>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'posts', :id=> @user2.id ) %> > show updates </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'createpost', :controller => 'posts', :id=> @user.id ) %> > post update </a>
+<% end %>
+&nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'selfshow', :controller => 'posts', :id=> @user.id ) %> > self post </a></br>
+<% end %>
+</div>
+
+<% @tag.each do |tt| %>
+<% if tt!= nil %>
+<% tt.posts.each do |p| %>
+<div class ="bookmarks">
+<p>Title:&nbsp;<%= p.title%> <p>
+<p>Post: &nbsp; <%= p.body %> </p>
+<p>Tag: &nbsp; 
+<% p.tags.each do |a| %>
+<span> <%= a.name %> </span>&nbsp;
+<% end %>
+</p>
+<% usr = User.find(p.user_id) %>
+<p>Creator: &nbsp; <a href = <%= url_for(:action => 'show', :controller => 'profiles', :id=> usr.id ) %> > <%= usr.fname %> &nbsp; <%= usr.lname %> </a></p>
+<p> Created at: <%= p.created_at %> </p>
+</div>
+<% end %>
+<% else %>
+<p> Nothing to display </p>
+<% end %>
+<% end %>
+</div>
+

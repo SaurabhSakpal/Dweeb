@@ -1,0 +1,19 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>Send Personal Message to <%= @user2.fname %> </h2>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'profiles') %> > back to profile </a> &nbsp; &nbsp; &nbsp;
+</div>
+<p style= "color: green" ><%= flash[:notice] %></p>
+<%= form_for @user, :url => { :controller => "messages" , :action => "create", :id => @user2.id } do |f| %>
+<h3>Subject:</h3>
+<input type = "text"  name ="message[sub]" />
+<h3>Realted to:</h3>
+<input type = "text" name ="message[skl]"/>
+<h3>Message:</h3>
+<textarea name="message[msg]" rows="12" column ="24"></textarea>
+<br/>
+<input type ="submit" name="commit" value= "send"/>
+<% end %>

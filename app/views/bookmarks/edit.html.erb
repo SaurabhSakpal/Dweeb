@@ -1,0 +1,30 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2> Add a bookmark</h2>
+</div>
+<div id = "bookmrk_msg">
+<p>You can add as much bookmarks as you want. Your bookmarks will be visible to all your profile visitors. We are working on the privacy system of the website so that you will be given more power to control stuffs like who can see and who can't. We are also adding DELETE bookmark option soon.</p>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'bookmarks', :id=> @user2.id ) %> > show bookmarks </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'edit', :controller => 'bookmarks', :id=> @user.id ) %> > add bookmarks </a></br>
+<% end %>
+</div>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<div id = "bok_frm">
+<form accept-charset="UTF-8" action="/bookmarks/update/<%= @user.id %>" method="post" class="bokmrk_form">
+<h3>Title</h3>	
+<input id="bk_title" name="bookmark[title]" size="30" type="text" />
+<h3>Bookmark Description(140 letters)<h3/>
+<textarea id="bk_body" name="bookmark[desc]" cols="40" rows="10"></textarea>
+<h3>Bookmark URL<h3/>
+
+<input id="bk_url" name="bookmark[url]" size="30" type="text" /></br>
+</br></br>
+<input  id ="brk_but" name="commit" type="submit" value="add bookmark" />
+</form>
+</div>
+</div>

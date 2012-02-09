@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dweeb</title>
+  <%= stylesheet_link_tag    "profiles" %>
+  <%= stylesheet_link_tag    "bookmarks" %>
+  <%= javascript_include_tag "profiles" %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "profile2" %>
+ <link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id = "complete">
+<div id = "top_bar">
+<image id ="logo" src = "/assets/comn/logo.jpg" height ="80px" width = "50px">
+<h1>Dweeb</h1>
+<div id = "home" class ="header_link">
+<a  href = <%= url_for(:action => 'show', :controller => 'profiles', :id => @user.id ) %> > home </a>
+</div>
+<div id = "logout" class ="header_link">
+<a href = <%= url_for(:action => 'logout', :controller => 'tempstores') %> > log out </a>
+</div>
+</div>
+<div id = "pat_msg_box">
+<p>Dear Users,</p>
+<p>Dweeb has recently been started and members are added everyday. You are amongst the first few initial so you might just find your latest update section empty. We would encourage you to post updates related to fields you are interested and topics that you come across. We hope you would soon relish the feature as members increase.</p>
+<p>-From the Dweeb Founder</p>
+</div>
+<div id= "content">
+<div id ="profile_bar">
+<% if @user2.photo_file_name != nil %>
+<image id ="profile_img" src = "/assets/pfpic/<%= @user2.id %>/<%= @user2.photo_file_name %>" height ="300px" width = "250px"> </br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<% else %>
+<image id ="profile_img" src = "/assets/comn/profile.jpg" height ="300px" width = "250px"></br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<% end %>
+<div  id ="navigpart">
+<% if @user.id == @user2.id %>
+<div class = "navilink" id ="jrtlink">
+<a href = <%= url_for(:action => 'edit', :controller => 'profiles') %> >  &nbsp;Change Profile Picture </a>
+</div>
+<% end %>
+<% if @user.id != @user2.id %>
+<div class = "navilink" id ="mrktlink">
+<a href = "/profiles/show/<%= @user2.id %>/"> Profile </a>
+</div>
+<% end %>
+<div  class = "navilink" id ="postlink">
+<a href = <%= url_for(:action => 'show', :controller => 'posts', :id => @user2.id ) %> > Latest Updates</a>
+</div>
+<div class = "navilink" id ="boklink">
+<a href = <%= url_for(:action => 'show', :controller => 'bookmarks') %> > Bookmarks</a>
+</div>
+<div class = "navilink" id ="eventlink">
+<a href = <%= url_for(:action => 'new', :controller => 'pictures') %> > Events</a>
+</div>
+<% if @user.id == @user2.id %>
+<% counter = 0 %>
+<% flag = 1 %>
+<% @user.messages.each do |p|%>
+<% if p.status == 'unread' %>
+<% counter = counter+1 %>
+<% flag = 0 %>
+<% end %>
+<% end %>
+<% if flag==0 %>
+<div class = "navilink" id ="msglink2">
+<a href = <%= url_for(:action => 'show', :controller => 'messages', :id => @user.id ) %> > Messages(<%= counter %>)</a>
+</div>
+<% else %>
+<div class = "navilink" id ="msglink">
+<a href = <%= url_for(:action => 'show', :controller => 'messages', :id => @user.id ) %> > Messages</a>
+</div>
+<% end %>
+<% end %>
+</div>
+<%= yield %>
+</div>
+</div>
+</body>
+</html>

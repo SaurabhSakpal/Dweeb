@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dweeb</title>
+  <%= stylesheet_link_tag    "users" %>
+  <%= javascript_include_tag "users" %>
+  <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id = "top_bar">
+<image id ="logo" src = "assets/comn/logo.jpg" height ="80px">
+<div id ="header_link">
+
+<a href = <%= url_for(:action => 'new', :controller => 'tempstores') %> > login </a>
+</div>
+</div>
+<div id ="header">
+<h1>Dweeb</h1>
+<p>&#8747 your creativity</p>
+</div>
+<p style="color: green"><%= flash[:notice] %></p>
+<%= yield %>
+<div id = "features">
+
+<img id = "img_feature"name ="slideImg" src = "assets/comn/img1.jpg" height = "400" width="550">
+</div>
+</body>
+</html>
+

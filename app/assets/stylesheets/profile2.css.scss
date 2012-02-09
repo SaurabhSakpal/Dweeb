@@ -1,0 +1,109 @@
+#content #profile_bar #prf_blck #prf_cnt table tr td.two a:link
+{
+text-decoration:underlined;
+color: blue;
+font-size:15px;
+font-style:bold;
+text-align :center;
+}
+#content #profile_bar #prf_blck #prf_cnt table tr td.two a:hover
+{
+text-decoration:underlined;
+color: blue;
+font-size:15px;
+font-style:bold;
+
+}
+#complete #profile_bar #content #prf_blck #prf_cnt table tr td.two a:visited
+{
+text-decoration:underlined;
+color: blue;
+font-size:15px;
+font-style:bold;
+}
+#content #profile_bar #prf_blck #prf_cnt table td.two
+{
+font-size : 16px;
+font-style:bold;
+}
+#content #profile_bar #prf_blck #prf_cnt table td.two ul
+{
+list-style-type: none;
+padding: 0px;
+margin: 0px;
+}
+#content #profile_bar #prf_blck #prf_cnt table td.two ul li 
+{
+margin-top: 10px;
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile td.one
+{
+width:200px;
+font-family:'Jura', sans-serif;
+color : orange;
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile td.two
+{
+width:500px;
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile tr
+{
+height :90px;
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile td.two input
+{
+height: 50px;
+border-radius :6px;
+border-color : green;
+font-family:'Jura', sans-serif;
+font-size :16px
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile td.two input.button
+{
+height: 50px;
+border-radius :6px;
+width : 300px;
+background-color: orange;
+}
+#content #profile_bar #prf_blck form.edit_user #Edit_Profile
+{
+padding-left :100px;
+padding-top :100px;
+}
+#content #my_profiles #para_skil
+{
+text-align :left;
+padding-left :20px;
+font-size :15px; 
+}
+#content #form_block p.Format_note
+{
+text-align :left;
+padding-left :20px;
+font-size :18px;
+color :red;
+}
+#content #form_block table.input_table
+{
+font-size :20px;
+font-family:'Jura', sans-serif;
+color :orange;
+padding-left :20px;
+padding-top: 30px;
+}
+#content #form_block table.input_table td
+{
+width: 100px;
+}
+#content #form_block table.input_table textarea
+{
+border-color :green;
+border-radius :6px;
+}
+#content #form_block table.input_table #brk_but
+{
+height: 50px;
+border-radius :6px;
+width : 300px;
+background-color: orange;
+}

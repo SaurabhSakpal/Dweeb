@@ -1,0 +1,4 @@
+<%= @user.fname %>,
+Thank you for registering!
+click here on this link to verify your email.
+<p><%= link_to "Verify", verify_user_url(@user, :host => "localhost:3000") %></p>

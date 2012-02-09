@@ -1,0 +1,79 @@
+<div id = "prf_blck">
+<div id = "prf_h2">
+<h2>EDIT PROFILE</h2>
+</div>
+<div id = "my_profiles">
+<% if @user2.id == @user.id %>
+<p id = "para">This is your personal information and it will be visible to all. you can change it using EDIT option</p>
+<% end %>
+</div>
+<div id ="option_bar">
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'profiles') %> > show profile </a> &nbsp; &nbsp; &nbsp;
+<% if @user2.id == @user.id %>
+<a href = <%= url_for(:action => 'edit', :controller => 'profiles') %> > edit profile</a>
+&nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'interests') %> > edit interests </a> &nbsp; &nbsp; &nbsp;
+<a href = <%= url_for(:action => 'show', :controller => 'interests') %> > edit skills</a>&nbsp; &nbsp; &nbsp;
+<% end %>
+<% if @user2.id != @user.id %>
+<a href = <%= url_for(:action => 'show', :controller => 'interests') %> > Connect with <%= @user2.fname %> </a><br/>
+<% end %>
+</div>
+<p style= "color: green" ><%= flash[:error] %></p>
+<p style="color: green"><%= flash[:notice] %></p>
+<%= form_for @user, :url => { :action => "update", :id => @user.id }, :html => { :multipart => true } do |f| %>
+<table id = "Edit_Profile">
+	<tr>
+	<td class ="one" ><label>First Name</label></td>
+	<td class ="two"  >
+	<%= f.text_field :fname %>
+	</td>
+	</tr>
+	<tr>
+	<td class ="one"><label>Last Name</label></td>
+	<td class ="two">
+	<%= f.text_field :lname %>
+	</td>
+	</tr>
+	<tr>
+	<td class ="one" >
+	<label>College</label>
+	</td>
+	<td class ="two">
+	<%= f.text_field :college %>
+	</td>
+	</tr>
+	<tr>
+	<td class ="one" ><label>Year</label></td>
+	<td class ="two" >
+	<%= f.text_field :year %> 
+	</td>
+	</tr>
+	</tr>
+	<tr>
+	<td class ="one" ><label>Branch</label></td>
+	<td class ="two" >
+	<%= f.text_field :branch %>
+	</td>
+	</tr>
+	<tr>
+	<td class ="one" >Profile Pic</td>
+	</td>
+	<td class ="two" >
+	<%= f.file_field :photo %> 
+	</td>
+	</tr>
+	<tr>
+	<td class ="one" >
+	</td>
+	<td class ="two" >
+	<input class = "button" name="submit" type="submit" value="Update" />
+	</td>
+	</tr>
+	</table>
+
+<% end %>
+
+
+
